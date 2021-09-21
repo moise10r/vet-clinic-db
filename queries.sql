@@ -9,3 +9,7 @@ SELECT * FROM animals WHERE name LIKE '%mon';
 
 --  List the name of all animals that are neutered and have less than 3 escape attempts.
  SELECT name FROM animals WHERE neutered=true AND escape_attempts<3;
+
+--  List date of birth of all animals named either "Agumon" or "Pikachu".
+ SELECT date_of_birth FROM animals WHERE name='Agumon' OR name='Pikachu';
+
