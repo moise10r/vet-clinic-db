@@ -1,6 +1,5 @@
 /* Populate database with sample data. */
 
-
 INSERT INTO animals (
   name, 
   date_of_birth, 
@@ -17,69 +16,125 @@ INSERT INTO animals (
 
 INSERT INTO animals (
   name, 
-  date_of_birth, weight_kg, neutered, escape_attempts) VALUES (
+  date_of_birth, 
+  weight_kg, 
+  neutered, 
+  escape_attempts) 
+  VALUES (
     'Gabumon',
-    'Nov 15, 2018',
+    '2018-11-15',
     8,
     true,
     2
 );
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES (
+
+INSERT INTO animals (
+  name, 
+  date_of_birth, 
+  weight_kg, 
+  neutered, 
+  escape_attempts) 
+  VALUES (
     'Pikachu',
-    'Jan 7, 2021',
+    '2021-01-07',
     15.04,
     false,
     1
 );
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES (
+
+INSERT INTO animals (
+  name, 
+  date_of_birth, 
+  weight_kg, 
+  neutered, 
+  escape_attempts) 
+  VALUES (
     'Devimon',
-    'May 12, 2017',
+    '2017-05-12',
     11,
     true,
     5
 );
 
-
-/* Update and Query animals table */
-
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES (
+-- New animals
+INSERT INTO animals (
+  name, 
+  date_of_birth, 
+  weight_kg, 
+  neutered, 
+  escape_attempts) 
+  VALUES (
     'Charmander',
-    'Feb 8, 2020',
+    '2020-02-08',
     -11,
     false,
     0
 );
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES (
+
+INSERT INTO animals (
+  name, 
+  date_of_birth, 
+  weight_kg, 
+  neutered, 
+  escape_attempts) 
+  VALUES (
     'Plantmon',
-    'Nov 15, 2022',
+    '2022-11-15',
     -5.7,
     true,
     2
 );
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES (
+
+INSERT INTO animals (name, 
+date_of_birth, 
+weight_kg, 
+neutered, 
+escape_attempts) 
+VALUES (
     'Squirtle',
-    'Apr 2, 1993',
+    '1993-04-02',
     -12.13,
     false,
     3
 );
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES (
+
+INSERT INTO animals (
+  name, 
+  date_of_birth, 
+  weight_kg, 
+  neutered, 
+  escape_attempts) 
+  VALUES (
     'Angemon',
-    'Jun 12, 2005',
+    '2005-06-12',
     -45,
     true,
     1
 );
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES (
+
+INSERT INTO animals (
+  name, 
+  date_of_birth, 
+  weight_kg, 
+  neutered, 
+  escape_attempts) 
+  VALUES (
     'Boarmon',
-    'Jun 7, 2005',
+    '2005-06-07',
     20.4,
     true,
     7
 );
-INSERT INTO animals (name, date_of_birth, weight_kg, neutered, escape_attempts) VALUES (
+
+INSERT INTO animals (
+  name, 
+  date_of_birth, 
+  weight_kg, 
+  neutered, 
+  escape_attempts) 
+  VALUES (
     'Blossom',
-    'Oct 13, 1998',
+    '1998-10-13',
     17,
     true,
     3
