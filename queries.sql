@@ -44,4 +44,5 @@ COMMIT TRANSACTION;
 SELECT COUNT(*) FROM animals;
 SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
 SELECT AVG(weight_kg) FROM animals;
-SELECT  MAX(escape_attempts), neutered FROM animals GROUP BY neutered;
+SELECT neutered, MAX(escape_attempts) FROM animals GROUP BY neutered;
+SELECT neutered, MIN(weight_kg), MAX(weight_kg) from animals GROUP BY neutered;
