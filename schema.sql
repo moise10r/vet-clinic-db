@@ -30,3 +30,4 @@ ALTER TABLE animals ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY;
 ALTER TABLE animals DROP species;
 ALTER TABLE animals ADD species_id INT;
 ALTER TABLE animals ADD owner_id INT; 
+ALTER TABLE animals ADD FOREIGN KEY (species_id) REFERENCES species(id); 
