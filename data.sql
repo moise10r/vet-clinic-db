@@ -140,21 +140,24 @@ INSERT INTO animals (
     3
 );
 
-
+BEGIN TRANSACTION;
 INSERT INTO owners (full_name, age) VALUES ('Sam Smith', 34);
 INSERT INTO owners (full_name, age) VALUES ('Jennifer Orwell', 19);
 INSERT INTO owners (full_name, age) VALUES ('Bob', 45);
 INSERT INTO owners (full_name, age) VALUES ('Melody Pond', 77);
 INSERT INTO owners (full_name, age) VALUES ('Dean Winchester', 14);
 INSERT INTO owners (full_name, age) VALUES ('Jodie Whittaker', 38);
+COMMIT TRANSACTION;
 
+BEGIN TRANSACTION;
 INSERT INTO species(name) VALUES('Pokemon');
 INSERT INTO species(name) VALUES('Digimon');
+COMMIT TRANSACTION;
 
--- UPDATE animals SET species_id = CASE
--- WHEN name LIKE '%mon' THEN 2
--- ELSE 1
--- END;
+UPDATE animals SET species_id = CASE
+WHEN name LIKE '%mon' THEN 2
+ELSE 1
+END;
 
 -- UPDATE animals SET owner_id = 1 WHERE name = 'Agumon';
 -- UPDATE animals SET owner_id = 2 WHERE name = 'Gabumon' OR name = 'Pikachu';
