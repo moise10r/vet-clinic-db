@@ -51,12 +51,17 @@ SELECT neutered, AVG(escape_attempts) FROM animals  date_of_birth BETWEEN '1990-
 -- Query multiple tables 
 
 SELECT animals.name, owners.full_name FROM animalsINNER JOIN owners ON owners.id = animals.owner_id
-    AND owners.full_name = 'Melody Pond';
+  AND owners.full_name = 'Melody Pond';
 
 SELECT animals.name, species.name FROM animals INNER JOIN species ON species.id = animals.species_id
-    AND species.name = 'Pokemon';
+  AND species.name = 'Pokemon';
 
 SELECT owners.full_name, animals.name FROM owners LEFT JOIN animals ON owners.id = animals.owner_id;
 
 SELECT species.name, COUNT(*) FROM animals FULL OUTER JOIN species ON species.id = animals.species_id
-    GROUP BY species.id;
+  GROUP BY species.id;
+
+SELECT animals.name, species.name FROM animals INNER JOIN owners ON owners.id = animals.owner_id
+  INNER JOIN species ON species.id = animals.species_id
+  WHERE owners.full_name = 'Jennifer Orwell'
+  AND species.name = 'Digimon'; 
