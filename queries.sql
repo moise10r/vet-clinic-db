@@ -69,3 +69,6 @@ SELECT animals.name, species.name FROM animals INNER JOIN owners ON owners.id = 
 SELECT animals.name, animals.escape_attempts FROM animals INNER JOIN owners ON owners.id = animals.owner_id
   WHERE owners.full_name = 'Dean Winchester'
   AND animals.escape_attempts = 0;
+
+SELECT owners.full_name, COUNT(animals.owner_id) FROM animals FULL OUTER JOIN owners ON animals.owner_id = owners.id
+    GROUP BY owners.id; 
