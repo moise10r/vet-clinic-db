@@ -95,7 +95,7 @@ SELECT animals.name, visits.date_of_visit FROM visits
     INNER JOIN vets ON vets.id = visits.vets_id
     INNER JOIN animals ON animals.id = visits.animals_id
     WHERE vets.name = 'Stephanie Mendez'
-    AND visits.date_of_visit BETWEEN 'Apr 1, 2020' AND 'Aug 30, 2020';
+    AND visits.date_of_visit BETWEEN '2020-04-01' AND '2020-04-30';
 
 SELECT animals.name, COUNT(visits.animals_id) AS visit_count FROM visits
     INNER JOIN vets ON vets.id = visits.vets_id
