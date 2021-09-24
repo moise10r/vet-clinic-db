@@ -83,9 +83,9 @@ SELECT animals.name, visits.date_of_visit AS last_visit FROM visits
     GROUP BY animals.name, visits.date_of_visit
     ORDER BY last_visit DESC LIMIT 1;
 
--- SELECT COUNT(DISTINCT visits.animals_id) FROM visits
---     INNER JOIN vets ON vets.id = visits.vets_id
---     WHERE vets.name = 'Stephanie Mendez';
+SELECT COUNT(DISTINCT visits.animals_id) FROM visits
+    INNER JOIN vets ON vets.id = visits.vets_id
+    WHERE vets.name = 'Stephanie Mendez';
 
 -- SELECT vets.name, species.name FROM vets 
 --     LEFT JOIN specialization ON specialization.vets_id = vets.id
