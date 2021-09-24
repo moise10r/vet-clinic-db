@@ -110,10 +110,10 @@ SELECT animals.name, visits.date_of_visit AS first_visit FROM visits
     GROUP BY animals.name, visits.date_of_visit
     ORDER BY first_visit LIMIT 1;
 
--- SELECT * FROM visits
---     INNER JOIN vets ON vets.id = visits.vets_id
---     INNER JOIN animals ON animals.id = visits.animals_id
---     ORDER BY visits.date_of_visit DESC LIMIT 1;
+SELECT * FROM visits
+    INNER JOIN vets ON vets.id = visits.vets_id
+    INNER JOIN animals ON animals.id = visits.animals_id
+    ORDER BY visits.date_of_visit DESC LIMIT 1;
 
 -- SELECT COUNT(visits.animals_id) FROM visits
 --     INNER JOIN vets ON vets.id = visits.vets_id
