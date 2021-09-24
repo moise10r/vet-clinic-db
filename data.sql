@@ -217,12 +217,12 @@ INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64,
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harkness', 38, 'Jun 8, 2008');
 COMMIT TRANSACTION;
 
--- BEGIN TRANSACTION;
--- INSERT INTO specialization (vets_id, species_id) VALUES (1, 1);
--- INSERT INTO specialization (vets_id, species_id) VALUES (3, 2);
--- INSERT INTO specialization (vets_id, species_id) VALUES (3, 1);
--- INSERT INTO specialization (vets_id, species_id) VALUES (4, 2);
--- COMMIT TRANSACTION;
+BEGIN TRANSACTION;
+INSERT INTO specialization (vets_id, species_id) VALUES (1, 1);
+INSERT INTO specialization (vets_id, species_id) VALUES (3, 2);
+INSERT INTO specialization (vets_id, species_id) VALUES (3, 1);
+INSERT INTO specialization (vets_id, species_id) VALUES (4, 2);
+COMMIT TRANSACTION;
 
 -- BEGIN TRANSACTION;
 -- INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (1, 1, 'May 24, 2020');
