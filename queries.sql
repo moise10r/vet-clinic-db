@@ -74,7 +74,7 @@ SELECT owners.full_name, COUNT(animals.owner_id) FROM animals FULL OUTER JOIN ow
     GROUP BY owners.id; 
 
 
-/* Add "join table" for visits */
+--Add "join table" for visits
 
 SELECT animals.name, visits.date_of_visit AS last_visit FROM visits
     INNER JOIN vets ON vets.id = visits.vets_id
