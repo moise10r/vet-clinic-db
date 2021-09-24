@@ -181,50 +181,50 @@ END;
 
 /* Query multiple tables */
 
-BEGIN TRANSACTION;
+BEGIN ;
 INSERT INTO owners (full_name, age) VALUES ('Sam Smith', 34);
 INSERT INTO owners (full_name, age) VALUES ('Jennifer Orwell', 19);
 INSERT INTO owners (full_name, age) VALUES ('Bob', 45);
 INSERT INTO owners (full_name, age) VALUES ('Melody Pond', 77);
 INSERT INTO owners (full_name, age) VALUES ('Dean Winchester', 14);
 INSERT INTO owners (full_name, age) VALUES ('Jodie Whittaker', 38);
-COMMIT TRANSACTION;
+COMMIT ;
 
-BEGIN TRANSACTION;
+BEGIN ;
 INSERT INTO species (name) VALUES ('Pokemon');
 INSERT INTO species (name) VALUES ('Digimon');
-COMMIT TRANSACTION;
+COMMIT ;
 
-BEGIN TRANSACTION;
+BEGIN ;
 UPDATE animals SET species_id = 1 WHERE name LIKE '%mon';
 UPDATE animals SET species_id = 2 WHERE species_id IS NULL;
-COMMIT TRANSACTION;
+COMMIT ;
 
-BEGIN TRANSACTION;
+BEGIN ;
 UPDATE animals SET owner_id = 1 WHERE name LIKE 'Agumon';
 UPDATE animals SET owner_id = 2 WHERE name IN ('Gabumon', 'Pikachu');
 UPDATE animals SET owner_id = 3 WHERE name IN ('Devimon', 'Plantmon');
 UPDATE animals SET owner_id = 4 WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
 UPDATE animals SET owner_id = 5 WHERE name IN ('Angemon', 'Boarmon');
-COMMIT TRANSACTION;
+COMMIT ;
 
 /* Add "join table" for visits */
 
-BEGIN TRANSACTION;
+BEGIN ;
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('William Tatcher', 45, '2000-04-23');
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Maisy Smith', 26, '2019-01-17');
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, '1981-05-04');
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harkness', 38, '2008-06-08');
-COMMIT TRANSACTION;
+COMMIT ;
 
-BEGIN TRANSACTION;
+BEGIN ;
 INSERT INTO specialization (vets_id, species_id) VALUES (1, 1);
 INSERT INTO specialization (vets_id, species_id) VALUES (3, 2);
 INSERT INTO specialization (vets_id, species_id) VALUES (3, 1);
 INSERT INTO specialization (vets_id, species_id) VALUES (4, 2);
-COMMIT TRANSACTION;
+COMMIT ;
 
-BEGIN TRANSACTION;
+BEGIN ;
 INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (1, 1, '2020-05-24');
 INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (1, 3, '2020-04-22');
 INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (2, 4, '2021-02-02');
@@ -245,4 +245,4 @@ INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (9, 2, '2020-02-2
 INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (9, 2, '2020-08-03');
 INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (10, 3, '2020-05-24');
 INSERT INTO visits (animals_id, vets_id, date_of_visit) VALUES (10, 1, '2021-01-11');
-COMMIT TRANSACTION;
+COMMIT ;
