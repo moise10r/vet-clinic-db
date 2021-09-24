@@ -97,11 +97,11 @@ SELECT animals.name, visits.date_of_visit FROM visits
     WHERE vets.name = 'Stephanie Mendez'
     AND visits.date_of_visit BETWEEN 'Apr 1, 2020' AND 'Aug 30, 2020';
 
--- SELECT animals.name, COUNT(visits.animals_id) AS visit_count FROM visits
---     INNER JOIN vets ON vets.id = visits.vets_id
---     INNER JOIN animals ON animals.id = visits.animals_id
---     GROUP BY animals.name, visits.animals_id
---     ORDER BY visit_count DESC LIMIT 1;
+SELECT animals.name, COUNT(visits.animals_id) AS visit_count FROM visits
+    INNER JOIN vets ON vets.id = visits.vets_id
+    INNER JOIN animals ON animals.id = visits.animals_id
+    GROUP BY animals.name, visits.animals_id
+    ORDER BY visit_count DESC LIMIT 1;
 
 -- SELECT animals.name, visits.date_of_visit AS first_visit FROM visits
 --     INNER JOIN vets ON vets.id = visits.vets_id
