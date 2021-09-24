@@ -87,9 +87,9 @@ SELECT COUNT(DISTINCT visits.animals_id) FROM visits
     INNER JOIN vets ON vets.id = visits.vets_id
     WHERE vets.name = 'Stephanie Mendez';
 
--- SELECT vets.name, species.name FROM vets 
---     LEFT JOIN specialization ON specialization.vets_id = vets.id
---     LEFT JOIN species ON species.id = specialization.species_id;
+SELECT vets.name, species.name FROM vets 
+    LEFT JOIN specialization ON specialization.vets_id = vets.id
+    LEFT JOIN species ON species.id = specialization.species_id;
 
 -- SELECT animals.name, visits.date_of_visit FROM visits
 --     INNER JOIN vets ON vets.id = visits.vets_id
